@@ -1,4 +1,7 @@
 function stringChop(str, size) {
+  if (size <= 0) return [];       // edge case: invalid chunk size
+  if (str.length === 0) return []; // edge case: empty string
+
   let result = [];
 
   for (let i = 0; i < str.length; i += size) {
